@@ -4,7 +4,9 @@ import { Switch, Route } from "react-router-dom";
 import { withRouter } from "react-router";
 
 // PAGES
-import { Books } from "./pages/Books";
+import { Cat } from "./pages/Cat";
+import { Contact } from "./pages/Contact";
+import { Home } from "./pages/Home";
 
 
 // COMPS
@@ -21,7 +23,9 @@ function _App() {
 
 						<div>
 							<Switch>
-								<Route exact component={Books} path={"/"} />
+								<Route exact component={Home} path={"/"} />
+								<Route exact component={Cat} path={"/category"} />
+								<Route exact component={Contact} path={"/contact"} />
 							</Switch>
 						</div>
 

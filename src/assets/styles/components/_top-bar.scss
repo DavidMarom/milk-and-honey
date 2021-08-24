@@ -3,13 +3,14 @@
 	flex-direction: row;
 	justify-content: space-between;
 
-	background-color: #f5bebe;
+	background-color: #ffffff;
 	width: 100%;
 
 	height: 100px;
 
 	padding-left: 50px;
 	padding-right: 50px;
+	filter: drop-shadow(0px 5px 5px #dfdfdf);
 }
 
 .active-cell {
@@ -19,16 +20,35 @@
 	text-decoration: none;
 	height: 55px;
 	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .inactive-cell {
 	display: inline;
 
-	color: #000000 !important;
+	color: #000000;
 	text-decoration: none;
 	padding-left: 30px;
+	padding-right: 30px;
 
 	a {
-		color: #000000 !important;
+		color: $text-dark;
+		font-size: 1.2rem;
 	}
+}
+
+.logo{
+	    background-image: url(../../img/logo.png);
+		height: 100px;
+		width: 217px;
+}
+
+.cart{
+		height: 100px;
+		width: 217px;
+
+		p{
+			color: $text-dark;
+			// margin: 0px !important;
+		}
 }

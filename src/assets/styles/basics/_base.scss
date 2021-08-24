@@ -8,14 +8,14 @@
 }
 
 html {
-	font-family: FiraSans;
+	font-family: Oswald;
 	overflow-y: scroll;
 }
 
 body {
 	font-size: rem(16px);
 	margin: 0;
-	background-color: $bg-dark;
+	background-color: $bg-light;
 	color: $text-light;
 }
 
@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: FiraSans;
+	font-family: Oswald;
 }
 
 h1 {
@@ -46,7 +46,7 @@ h6 {
 
 .small-text {
 	height: 17px;
-	font-family: FiraSans;
+	font-family: Oswald;
 	font-size: 14px;
 	font-weight: 500;
 	font-stretch: normal;
@@ -57,13 +57,13 @@ h6 {
 	color: #8787ab;
 }
 
-p {
-	margin: 0 0 1em;
-	a {
-		color: #000000;
-		text-decoration: underline;
-	}
-}
+// p {
+// 	margin: 0 0 1em;
+// 	a {
+// 		color: #000000;
+// 		text-decoration: underline;
+// 	}
+// }
 
 /* HIGHT *********************/
 

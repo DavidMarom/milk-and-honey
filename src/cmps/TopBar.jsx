@@ -11,31 +11,39 @@ export const TopBar = () => {
 		<div className="outter-container">
 			{/* <div className="inner-container"> */}
 			<div className="top-bar">
-				<div className="ca">LOGO</div>
+				<div className="ca logo"></div>
 
 				<div className="ca">
 					<div>
 
-						<div className={(pageName === 'authors' ? "active-cell" : "inactive-cell")}>
-							<NavLink to="/authors">Authors</NavLink>
+						<div className={(pageName === 'home' ? "active-cell" : "inactive-cell")}>
+							<NavLink to="/">Home</NavLink>
 						</div>
 
-						<div className={(pageName === 'books' ? "active-cell" : "inactive-cell")}>
-							<NavLink to="/">Books</NavLink>
+						<div className={(pageName === 'men' ? "active-cell" : "inactive-cell")}>
+							<NavLink to="/category">Men</NavLink>
 						</div>
 
-						<div className={(pageName === 'books' ? "active-cell" : "inactive-cell")}>
-							<NavLink to="/">Books</NavLink>
+						<div className={(pageName === 'women' ? "active-cell" : "inactive-cell")}>
+							<NavLink to="/category">Women</NavLink>
 						</div>
 
-						<div className={(pageName === 'tasks' ? "active-cell" : "inactive-cell")}>
-							<NavLink to="/tasks">Contact Us</NavLink>
+						<div className={(pageName === 'jewelery' ? "active-cell" : "inactive-cell")}>
+							<NavLink to="/category">Jewelery</NavLink>
+						</div>
+						
+						<div className={(pageName === 'electronics' ? "active-cell" : "inactive-cell")}>
+							<NavLink to="/category">Electronics</NavLink>
+						</div>
+
+						<div className={(pageName === 'contact' ? "active-cell" : "inactive-cell")}>
+							<NavLink to="/contact">Contact Us</NavLink>
 						</div>
 
 					</div>
 				</div>
 
-				<div className="ca"><p>CART</p></div>
+				<div className="ca cart"><p>CART</p></div>
 
 			</div>
 			{/* </div> */}

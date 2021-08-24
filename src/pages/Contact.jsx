@@ -4,7 +4,7 @@ import { setPageName } from '../store/actions/userActions'
 import { loadBooks, countBooks } from "../store/actions/bookActions";
 import { loadAuthors } from "../store/actions/authorActions";
 
-const _Books = () => {
+const _Contact = () => {
 	const dispatch = useDispatch()
 	const [refresh, setRefresh] = useState(0)
 
@@ -48,10 +48,10 @@ const _Books = () => {
 		
 				<div className="cat-page">
 
-					<h1>Hi</h1>
+					<h1>Contact Us</h1>
 				</div>
 
 		
 	)
 }
-export const Books = _Books
+export const Contact = _Contact
