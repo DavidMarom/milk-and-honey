@@ -2,10 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-
 export const TopBar = () => {
 	const pageName = useSelector((state) => state.user.pageName);
-
 
 	return (
 		<div className="outter-container">
@@ -21,19 +19,19 @@ export const TopBar = () => {
 						</div>
 
 						<div className={(pageName === 'men' ? "active-cell" : "inactive-cell")}>
-							<NavLink to="/category">Men</NavLink>
+							<NavLink to={{pathname: "/category",state: {cat: "Men"}}}>Men</NavLink>
 						</div>
 
 						<div className={(pageName === 'women' ? "active-cell" : "inactive-cell")}>
-							<NavLink to="/category">Women</NavLink>
+							<NavLink to={{pathname: "/category",state: {cat: "Women"}}}>Women</NavLink>
 						</div>
 
 						<div className={(pageName === 'jewelery' ? "active-cell" : "inactive-cell")}>
-							<NavLink to="/category">Jewelery</NavLink>
+							<NavLink to={{pathname: "/category",state: {cat: "Jewelery"}}}>Jewelery</NavLink>
 						</div>
 						
 						<div className={(pageName === 'electronics' ? "active-cell" : "inactive-cell")}>
-							<NavLink to="/category">Electronics</NavLink>
+							<NavLink to={{pathname: "/category",state: {cat: "Electronics"}}}>Electronics</NavLink>
 						</div>
 
 						<div className={(pageName === 'contact' ? "active-cell" : "inactive-cell")}>
