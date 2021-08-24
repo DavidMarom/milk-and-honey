@@ -1,0 +1,30 @@
+
+.btn {
+    border: 0px solid #ffffff00;
+    color: #ffffff;
+	background-color: #ffffff00;
+    border-radius: 0px;
+    // padding: 10px 20px 10px 20px;
+    text-align: center;
+    // font-family: 'Red Hat Text', sans-serif;
+}
+
+.btn2 {
+    border: 2px solid #ffffff00;
+    color: #ffffff;
+    border-radius: 50px;
+    background-color: #4cd02b;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Red Hat Text', sans-serif;
+    width: fit-content;
+}
+
+.lnk-btn{
+    cursor: pointer;
+}
+
+.lnk-btn:hover{
+    text-decoration: underline;
+}
