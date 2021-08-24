@@ -1,57 +1,56 @@
-import React, { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { setPageName } from '../store/actions/userActions'
-import { loadBooks, countBooks } from "../store/actions/bookActions";
-import { loadAuthors } from "../store/actions/authorActions";
+import { loadBooks } from '../store/actions/bookActions'
+import { ProdCard } from '../cmps/ProdCard'
 
-const _Home = () => {
+export const Home = () => {
 	const dispatch = useDispatch()
-	const [refresh, setRefresh] = useState(0)
-
-	const bookCount = useSelector((state) => state.book.bookCount);
-	const books = useSelector((state) => state.book.books);
-
-	const [currPage, setCurrPage] = useState(1);
-	const [search, setSearch] = useState('');
-
-	let totalPages = Math.ceil(bookCount / 4)
-
-	// const searchChange = ev => {
-	// 	setSearch(ev.target.value);
-	// }
-
-	// const doSearch = (ev) => {
-	// 	ev.preventDefault();
-	// 	dispatch(loadBooks(search));
-	// }
-
-	// const doRefresh = () => {
-	// 	setRefresh(refresh+1)
-	// 	dispatch(loadBooks('', currPage));
-	// }
-
-	// useEffect(() => {
-	// 	dispatch(loadBooks('', currPage));
-	// 	dispatch(loadAuthors());
-
-	// }, [currPage, refresh]);
+	// const [refresh, setRefresh] = useState(0)
+	// const books = useSelector((state) => state.book.books);
 
 
-	// // On mount
-	// useEffect(() => {
-	// 	dispatch(setPageName('books'));
-	// 	dispatch(countBooks());
-	// }, []);
+	useEffect(() => {
+		dispatch(setPageName("Home"));
+	});
 
+	useEffect(() => {
+		dispatch(loadBooks(5));
+	}, []);
+
+	const prods = useSelector((state) => state.book.books);
+
+	console.log(prods);
 	return (
+		<div className="cat-page">
 
-		
-				<div className="cat-page">
+			<div className="ra">
+				<div className="big-image"></div>
+			</div>
 
-					<h1>Home</h1>
-				</div>
+			<div className="ra">
+				<h3>LATEST PRODUCTS </h3>
+			</div>
 
-		
+			{
+				(prods ?
+
+					prods.map((prod, idx) => {
+						return (
+
+							<ProdCard key={idx} prod={prod} />
+
+						)
+					})
+
+
+
+
+					:
+					<h1>LOADING</h1>
+				)
+			}
+
+		</div>
 	)
 }
-export const Home = _Home

@@ -1,31 +1,19 @@
 import { bookService } from '../../services/bookService';
-import { loading, doneLoading } from './systemActions';
+// import { loading, doneLoading } from './systemActions';
 
-export function countBooks() {
-  return async dispatch => {
-    const number = await bookService.count();
-    dispatch({ type: 'COUNT_BOOKS', number })
-  };
-}
 
-export function updateBook(book) {
-  return async dispatch => {
-    const _book = await bookService.update(book);
-    dispatch({ type: 'UPDATE_BOOK', _book })
-  };
-}
 
-export function loadBooks(filter, currPage) {
+export function loadBooks(limit) {
   return async dispatch => {
     try {
-      dispatch(loading());
-      const books = await bookService.getBooks(filter, currPage);
+    //   dispatch(loading());
+      const books = await bookService.getBooks(limit);
       dispatch({ type: 'SET_BOOKS', books });
     } catch (err) {
       console.log('BookActions: err in loadBook', err);
 
     } finally {
-      dispatch(doneLoading());
+    //   dispatch(doneLoading());
     }
   };
 }
