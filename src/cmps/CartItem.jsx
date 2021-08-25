@@ -1,16 +1,15 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
-import { addItem } from '../store/actions/itemActions'
+import { addItem,removeItem } from '../store/actions/itemActions'
 
-export const ProdCard = ({ prod }) => {
+export const CartItem = ({ prod }) => {
 	const dispatch = useDispatch()
 
 	const cart = useSelector((state) => state.item.items);
-	const doAddToCart = () => {
 
-		dispatch(addItem(prod, cart));
-	}
+	const doAddToCart = () => { dispatch(addItem(prod, cart)); }
+	const removeFromCart = () => { dispatch(removeItem(prod, cart)); }
 
 	return (
 		<div className="prod-card">
@@ -27,13 +26,16 @@ export const ProdCard = ({ prod }) => {
 					<p>{prod.category}</p>
 				</div>
 			</NavLink>
-
 			<div className="center-element category-text">
-				<p>{prod.price} $</p>
+				<p>{prod.qty} x {prod.price} $ = {prod.qty * prod.price} $</p>
 			</div>
 
 			<div className="center-element category-text">
-				<button onClick={doAddToCart} className="add-to-cart"><i className="fas fa-cart-plus"></i>‏‏‎‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ADD TO CART</button>
+				<button onClick={doAddToCart} className="add-to-cart">‏‏‎‏‏‎‎‏‏‎+</button>
+			</div>
+
+			<div className="center-element category-text">
+				<button onClick={removeFromCart} className="add-to-cart">‏‏‎‏‏‎‎‏‏‎-</button>
 			</div>
 
 

@@ -14,13 +14,13 @@ export function item(state = initialState, action = {}) {
 	switch (action.type) {
 
 		case 'UPDATE_ITEM':
-			console.log('UPDATE_ITEM', action.newItem)
 			return { ...state, items: state.items.map(stateItem => (stateItem.id === action.newItem.id) ? action.newItem : stateItem) };
 
 		case 'ADD_ITEM':
-			console.log('ADD_ITEM', action.newItem)
 			return { ...state, items: [...state.items, action.newItem] };
 
+		case 'REMOVE_ITEM':
+			return { ...state, items:  state.items.filter(stateItem => stateItem._id == action.itemID)    };
 
 		default: return state
 	}
