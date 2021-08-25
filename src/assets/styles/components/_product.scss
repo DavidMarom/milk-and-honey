@@ -1,0 +1,43 @@
+.prod-card {
+	width: 180px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.img-container {
+	margin: auto;
+	display: flex;
+	width: 150px;
+	height: 150px;
+	margin-bottom: 1rem;
+	img {
+		margin: auto;
+		max-width: 100%;
+		max-height: 150px;
+	}
+}
+
+.title-text {
+	height: 70px;
+	width: 180px;
+	margin-bottom: 1.5rem;
+	h3 {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		color: #000000;
+		font-weight: 600;
+		font-size: 0.9rem;
+		text-align: center;
+	}
+}
+
+.category-text {
+	min-height: 30px;
+	p {
+		color: $text-dark;
+		font-size: 0.9rem;
+		margin: 0px;
+		text-align: center;
+	}
+}
