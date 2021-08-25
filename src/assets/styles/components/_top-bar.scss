@@ -5,7 +5,6 @@
 
 	background-color: #ffffff;
 	width: 100%;
-
 	height: 100px;
 
 	padding-left: 50px;
@@ -16,16 +15,14 @@
 
 .active-cell {
 	display: inline; /* the default for span */
-
-	color: $yellow !important;
+	color: $yellow;
 	text-decoration: none;
-	height: 55px;
 	padding-left: 20px;
 	padding-right: 20px;
 	p,
 	a {
 		display: inline;
-		color: $yellow !important;
+		color: $yellow;
 		font-size: 1.2rem;
 	}
 }
@@ -33,7 +30,7 @@
 .inactive-cell {
 	display: inline;
 
-	color: $text-dark !important;
+	color: $text-dark;
 	text-decoration: none;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -41,15 +38,9 @@
 	p,
 	a {
 		display: inline;
-		color: $text-dark !important;
+		color: $text-dark;
 		font-size: 1.2rem;
 	}
-}
-
-.logo {
-	background-image: url(../../img/logo.png);
-	height: 100px;
-	width: 217px;
 }
 
 .cart {
@@ -59,5 +50,19 @@
 	p {
 		color: $text-dark;
 		// margin: 0px !important;
+	}
+}
+
+.logo {
+	background-image: url(../../img/logo.png);
+	height: 100px;
+	width: 217px;
+}
+
+@media only screen and (max-width: 1405px) {
+	.logo {
+		background-image: url(../../img/logo_small.png);
+		height: 104px;
+		width: 100px;
 	}
 }

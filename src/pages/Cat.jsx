@@ -18,7 +18,6 @@ export const Cat = ({ location }) => {
 
 	return (
 		<div className="cat-page">
-			{/* <h1>{location.state.cat}</h1> */}
 
 			<div className="grid">
 				{(prods ?

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setPageName } from '../store/actions/userActions'
+import { ProdCard } from '../cmps/ProdCard'
 
 export const CartPage = () => {
 	const dispatch = useDispatch()
@@ -11,8 +12,15 @@ export const CartPage = () => {
 	console.log(cart);
 
 	return (
-		<div className="product-page">
-			sadfsd
-		</div>
+			<div className="grid">
+				{(cart ?
+					cart.map((prod, idx) => {
+						return (<ProdCard key={idx} prod={prod} />)
+					})
+					:
+					<h1>LOADING</h1>
+				)
+				}
+			</div>
 	)
 }
