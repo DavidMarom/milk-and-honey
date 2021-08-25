@@ -21,7 +21,7 @@ export const Home = () => {
 				<h3>LATEST PRODUCTS </h3>
 			</div>
 
-			<div className="rb">
+			<div className="grid">
 				{(prods ?
 					prods.map((prod, idx) => {
 						return (<ProdCard key={idx} prod={prod} />)

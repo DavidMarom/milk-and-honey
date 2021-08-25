@@ -6,9 +6,9 @@ import { ProdCard } from '../cmps/ProdCard'
 import { utils } from '../services/utils'
 
 export const Cat = ({ location }) => {
+
 	const dispatch = useDispatch()
 	let apiCatName = utils.getApiCatNameByTitle(location.state.cat);
-	console.log(apiCatName);
 
 	useEffect(() => { dispatch(setPageName(location.state.cat)); });
 	useEffect(() => { dispatch(loadProductsOfCategory(apiCatName)) }, [apiCatName]);
@@ -18,9 +18,9 @@ export const Cat = ({ location }) => {
 
 	return (
 		<div className="cat-page">
-			<h1>{location.state.cat}</h1>
+			{/* <h1>{location.state.cat}</h1> */}
 
-			<div className="rb">
+			<div className="grid">
 				{(prods ?
 					prods.map((prod, idx) => {
 						return (<ProdCard key={idx} prod={prod} />)
@@ -30,7 +30,6 @@ export const Cat = ({ location }) => {
 				)
 				}
 			</div>
-
 
 		</div>
 	)
