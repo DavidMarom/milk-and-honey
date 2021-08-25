@@ -13,13 +13,11 @@
 @import "basics/utils.scss";
 
 // Pages
-@import "pages/admin";
-@import "pages/clockIn";
-@import "pages/profile";
+// @import "pages/profile";
 @import "pages/home";
-@import "pages/documents";
 @import "pages/content-container";
 @import "pages/cat-page";
+@import "pages/product-page";
 
 // Components
 @import "components/nav-bar.scss";

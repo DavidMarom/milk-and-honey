@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  // height: 400px;
 }
 
 .inner-container {
@@ -106,22 +105,7 @@
   grid-gap: 20px;
 }
 
-.main-container {
-  padding: 2rem;
-  width: 100%;
-  background-color: $bg-light;
-  min-height: 700px;
-}
 
-.footer {
-  margin-top: 50px;
-  background-color: #f7f7f7;
-  height: 400px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-top: 1px solid #dddddd;
-}
 
 .login-input {
   padding: 7px;
