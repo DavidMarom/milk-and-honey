@@ -3,17 +3,15 @@ import thunk from 'redux-thunk'
 
 import { user } from '../store/reducers/userReducer';
 import { products } from '../store/reducers/productReducer';
-import { author } from '../store/reducers/authorReducer';
+import { item } from '../store/reducers/itemReducer';
 import { task } from '../store/reducers/taskReducer';
-import { system } from '../store/reducers/systemReducer';
 
 
 const rootReducer = combineReducers({
     user,
     products,
-	author,
+	item,
 	task,
-    system
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

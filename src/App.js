@@ -8,6 +8,7 @@ import { Cat } from "./pages/Cat";
 import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 import { ProductPage } from "./pages/ProductPage";
+import { CartPage } from "./pages/CartPage";
 
 // COMPS
 import { TopBar } from "./cmps/TopBar";
@@ -24,6 +25,7 @@ function _App() {
 						<Route exact component={Cat} path={"/category"} />
 						<Route exact component={Contact} path={"/contact"} />
 						<Route exact component={ProductPage} path={"/product"} />
+						<Route exact component={CartPage} path={"/cart"} />
 					</Switch>
 				</div>
 			</div>

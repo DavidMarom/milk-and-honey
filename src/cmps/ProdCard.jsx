@@ -1,9 +1,18 @@
+import React, { useEffect } from 'react'
 import { NavLink, useParams } from "react-router-dom";
-import React from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import { addItem } from '../store/actions/itemActions'
+
 
 
 export const ProdCard = ({ prod }) => {
+	const dispatch = useDispatch()
 
+
+	const doAddToCart = () => {
+		dispatch(addItem(prod));
+		console.log(prod);
+	}
 
 
 	return (
@@ -33,7 +42,7 @@ export const ProdCard = ({ prod }) => {
 			</div>
 
 			<div className="center-element category-text">
-				<button className="add-to-cart"><i className="fas fa-cart-plus"></i>‏‏‎‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ADD TO CART</button>
+				<button onClick={doAddToCart} className="add-to-cart"><i className="fas fa-cart-plus"></i>‏‏‎‏‏‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ADD TO CART</button>
 			</div>
 
 

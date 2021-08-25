@@ -10,17 +10,21 @@
 	background-color: $yellow;
 	border: 0px;
 	padding:7px 10px 7px 10px;
+	cursor: pointer;
+	border:1px solid #00000000;
+	&:hover{
+		border:1px solid #000000;
+
+	}
 }
 
 .add-to-cart2{
-	// margin-top: 30px;
 	background-color: $yellow;
 	border: 0px;
 	padding:7px 10px 7px 10px;
-
 	width:150px;
 	color: #000000;
-
+	cursor: pointer;
 }
 
 .price{

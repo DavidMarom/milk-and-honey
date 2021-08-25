@@ -1,5 +1,5 @@
 import { userService } from '../../services/userService';
-import { loading, doneLoading } from './systemActions';
+// import { loading, doneLoading } from './systemActions';
 
 export function countUsers() {
   return async dispatch => {
@@ -25,14 +25,12 @@ export function showPopup(show) {
 export function loadUsers(filter, currPage) {
   return async dispatch => {
     try {
-      dispatch(loading());
       const users = await userService.getUsers(filter, currPage);
       dispatch({ type: 'SET_USERS', users });
     } catch (err) {
       console.log('UserActions: err in loadUsers', err);
 
     } finally {
-      dispatch(doneLoading());
     }
   };
 }

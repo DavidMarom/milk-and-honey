@@ -4,13 +4,6 @@ import { setPageName } from '../store/actions/userActions'
 
 const _Contact = () => {
 	const dispatch = useDispatch()
-	// const [refresh, setRefresh] = useState(0)
-
-	// const books = useSelector((state) => state.book.books);
-
-	// const [currPage, setCurrPage] = useState(1);
-	// const [search, setSearch] = useState('');
-
 	useEffect(() => { dispatch(setPageName("Contact")) });
 
 	return (

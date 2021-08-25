@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 export const TopBar = () => {
 	const page = useSelector((state) => state.user.pageName);
+	const cart = useSelector((state) => state.item.items);
 
 	return (
 		<div className="outter-container">
@@ -40,7 +41,13 @@ export const TopBar = () => {
 					</div>
 				</div>
 
-				<div className="ca cart"><p>CART</p></div>
+				<div className="ca cart">
+
+				<div className={(page === 'Cart' ? "active-cell" : "inactive-cell")}>
+							<NavLink to="/cart">CART ({cart.length})</NavLink>
+						</div>
+
+				</div>
 
 			</div>
 		</div>
