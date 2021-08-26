@@ -1,5 +1,4 @@
 import { userService } from '../../services/userService';
-// import { loading, doneLoading } from './systemActions';
 
 export function countUsers() {
   return async dispatch => {

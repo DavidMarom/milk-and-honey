@@ -5,7 +5,6 @@ import { addItem,removeItem } from '../store/actions/itemActions'
 
 export const CartItem = ({ prod }) => {
 	const dispatch = useDispatch()
-
 	const cart = useSelector((state) => state.item.items);
 
 	const doAddToCart = () => { dispatch(addItem(prod, cart)); }
@@ -30,13 +29,16 @@ export const CartItem = ({ prod }) => {
 				<p>{prod.qty} x {prod.price} $ = {prod.qty * prod.price} $</p>
 			</div>
 
+		<div className="ra ">
+
 			<div className="center-element category-text">
-				<button onClick={doAddToCart} className="add-to-cart">‏‏‎‏‏‎‎‏‏‎+</button>
+				<button onClick={doAddToCart} className="plus-minus">‏‏‎‏‏‎‎‏‏‎+</button>
 			</div>
 
 			<div className="center-element category-text">
-				<button onClick={removeFromCart} className="add-to-cart">‏‏‎‏‏‎‎‏‏‎-</button>
+				<button onClick={removeFromCart} className="plus-minus">‏‏‎‏‏‎‎‏‏‎-</button>
 			</div>
+		</div>
 
 
 		</div>

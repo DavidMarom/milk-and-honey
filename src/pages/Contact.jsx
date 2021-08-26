@@ -9,6 +9,7 @@ const _Contact = () => {
 	return (
 		<div className="cat-page">
 			<h1>Contact Us</h1>
+			<h3>David Marom: 058-7077017</h3>
 		</div>
 	)
 }

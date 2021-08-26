@@ -2,7 +2,12 @@ export function addItem(item, cart) {
 	let newItem = item;
 
 	let exist = false;
-	cart.map((itemInCart) => { if (itemInCart.id === item.id) { exist = true } });
+	cart.forEach((itemInCart) => { if (itemInCart.id === item.id) { exist = true } });
+	
+	
+
+
+
 
 	if (exist) {
 		newItem.qty = item.qty + 1;

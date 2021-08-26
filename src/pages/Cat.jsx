@@ -11,7 +11,7 @@ export const Cat = ({ location }) => {
 	let apiCatName = utils.getApiCatNameByTitle(location.state.cat);
 
 	useEffect(() => { dispatch(setPageName(location.state.cat)); });
-	useEffect(() => { dispatch(loadProductsOfCategory(apiCatName)) }, [apiCatName]);
+	useEffect(() => { dispatch(loadProductsOfCategory(apiCatName)) }, [apiCatName,dispatch]);
 
 
 	const prods = useSelector((state) => state.products.products);

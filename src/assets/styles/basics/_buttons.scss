@@ -25,7 +25,30 @@
 	width:150px;
 	color: #000000;
 	cursor: pointer;
+	border:1px solid #00000000;
+	&:hover{
+		border:1px solid #000000;
+
+	}
 }
+
+
+
+.plus-minus{
+	background-color: $yellow;
+	border: 0px;
+	padding:7px 10px 7px 10px;
+	width:50px;
+	color: #000000;
+	cursor: pointer;
+	border:1px solid #00000000;
+	&:hover{
+		border:1px solid #000000;
+
+	}
+}
+
+
 
 .price{
 	font-weight: 600;

@@ -4,7 +4,6 @@ import { setPageName } from '../store/actions/userActions'
 import { loadProducts } from '../store/actions/productActions'
 import { addItem } from '../store/actions/itemActions'
 
-
 export const ProductPage = ({ location }) => {
 	const dispatch = useDispatch()
 	const cart = useSelector((state) => state.item.items);
@@ -15,16 +14,14 @@ export const ProductPage = ({ location }) => {
 	const product = location.state.prod;
 	const doAddToCart = () => {
 		 dispatch(addItem(product, cart));
-		console.log(product);
 		 }
-
 
 	return (
 		<div className="product-page">
 
 			<div className="ppage-right-side">
 				<div className="bigImg-container">
-					<img src={product.image} />
+					<img src={product.image} alt="logo" />
 				</div>
 			</div>
 
