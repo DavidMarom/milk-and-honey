@@ -5,10 +5,9 @@ import { addItem } from '../store/actions/itemActions'
 
 export const ProdCard = ({ prod }) => {
 	const dispatch = useDispatch()
-
 	const cart = useSelector((state) => state.item.items);
+	
 	const doAddToCart = () => {
-
 		dispatch(addItem(prod, cart));
 	}
 

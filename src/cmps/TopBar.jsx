@@ -1,10 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import {storageService} from "../services/storageService";
 
 export const TopBar = () => {
 	const page = useSelector((state) => state.user.pageName);
 	const cart = useSelector((state) => state.item.items);
+	storageService.saveToStorage("items",cart);
 
 	return (
 		<div className="outter-container">

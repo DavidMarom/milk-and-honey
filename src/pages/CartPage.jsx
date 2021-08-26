@@ -9,18 +9,16 @@ export const CartPage = () => {
 
 	const cart = useSelector((state) => state.item.items);
 
-	console.log(cart);
-
 	return (
-			<div className="grid">
-				{(cart ?
-					cart.map((prod, idx) => {
-						return (<CartItem key={idx} prod={prod} />)
-					})
-					:
-					<h1>LOADING</h1>
-				)
-				}
-			</div>
+		<div className="grid">
+			{(cart ?
+				cart.map((prod, idx) => {
+					return (<CartItem key={idx} prod={prod} />)
+				})
+				:
+				<h1>LOADING</h1>
+			)
+			}
+		</div>
 	)
 }

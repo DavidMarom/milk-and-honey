@@ -1,7 +1,9 @@
 export function addItem(item, cart) {
 	let newItem = item;
+
 	let exist = false;
 	cart.map((itemInCart) => { if (itemInCart.id === item.id) { exist = true } });
+
 	if (exist) {
 		newItem.qty = item.qty + 1;
 		return async dispatch => { dispatch({ type: 'UPDATE_ITEM', newItem }) }
@@ -14,22 +16,12 @@ export function addItem(item, cart) {
 
 export function removeItem(item) {
 	let newItem = item;
-
 	if (item.qty > 1) {
 		newItem.qty = item.qty - 1;
 		return async dispatch => { dispatch({ type: 'UPDATE_ITEM', newItem }) }
 
-
-	}else{
-		let itemID = item.id;
-		return async dispatch => { dispatch({ type: 'REMOVE_ITEM', itemID }) }
-
-
-
+	} else {
+		let newItem = item;
+		return async dispatch => { dispatch({ type: 'REMOVE_ITEM', newItem }) }
 	}
-
-
-
-
-
 }
