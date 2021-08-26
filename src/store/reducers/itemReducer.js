@@ -1,5 +1,4 @@
 let localItems = [];
-
 if (localStorage.items) localItems = JSON.parse(localStorage.items);
 
 const initialState = {

@@ -6,10 +6,16 @@ import { addItem } from '../store/actions/itemActions'
 export const ProdCard = ({ prod }) => {
 	const dispatch = useDispatch()
 	const cart = useSelector((state) => state.item.items);
-	
+	const user = useSelector((state) => state.user.loggedInUser);
+
 	const doAddToCart = () => {
 		dispatch(addItem(prod, cart));
 	}
+
+	const isInwhishList = () => {
+		return user.wish.includes(prod.id);
+	}
+
 
 	return (
 		<div className="prod-card">
@@ -20,12 +26,18 @@ export const ProdCard = ({ prod }) => {
 
 				<div className="center-element title-text">
 					<h3>{prod.title}</h3>
+				{(isInwhishList() ?		<div  className="on-list">♥</div>	: null	 )}
 				</div>
+
+
 
 				<div className="center-element category-text">
 					<p>{prod.category}</p>
 				</div>
 			</NavLink>
+
+
+			
 
 			<div className="center-element category-text">
 				<p>{prod.price} $</p>

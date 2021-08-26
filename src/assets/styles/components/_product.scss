@@ -43,3 +43,21 @@
 		text-align: center;
 	}
 }
+
+.add-to-list {
+	color: $yellow;
+	cursor: pointer;
+
+	&:hover {
+		color: #ff0088;
+	}
+}
+
+.on-list {
+	color: #ff0088;
+	cursor: pointer;
+
+	&:hover {
+		color: rgb(114, 114, 114);
+	}
+}
