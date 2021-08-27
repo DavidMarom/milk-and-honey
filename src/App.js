@@ -10,6 +10,9 @@ import { Home } from "./pages/Home";
 import { ProductPage } from "./pages/ProductPage";
 import { CartPage } from "./pages/CartPage";
 
+import Auth from "./pages/firebase/Auth";
+// import Login from "./pages/firebase/Login";
+
 // COMPS
 import { TopBar } from "./cmps/TopBar";
 
@@ -26,6 +29,7 @@ function _App() {
 						<Route exact component={Contact} path={"/contact"} />
 						<Route exact component={ProductPage} path={"/product"} />
 						<Route exact component={CartPage} path={"/cart"} />
+						<Route exact component={Auth} path={"/auth"} />
 					</Switch>
 				</div>
 			</div>

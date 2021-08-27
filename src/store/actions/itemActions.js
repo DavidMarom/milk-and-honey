@@ -4,11 +4,6 @@ export function addItem(item, cart) {
 	let exist = false;
 	cart.forEach((itemInCart) => { if (itemInCart.id === item.id) { exist = true } });
 	
-	
-
-
-
-
 	if (exist) {
 		newItem.qty = item.qty + 1;
 		return async dispatch => { dispatch({ type: 'UPDATE_ITEM', newItem }) }

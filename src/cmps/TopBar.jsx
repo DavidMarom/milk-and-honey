@@ -1,12 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import {storageService} from "../services/storageService";
+import { storageService } from "../services/storageService";
 
 export const TopBar = () => {
 	const page = useSelector((state) => state.user.pageName);
 	const cart = useSelector((state) => state.item.items);
-	storageService.saveToStorage("items",cart);
+	storageService.saveToStorage("items", cart);
 
 	return (
 		<div className="outter-container">
@@ -45,9 +45,13 @@ export const TopBar = () => {
 
 				<div className="ca cart">
 
-				<div className={(page === 'Cart' ? "active-cell" : "inactive-cell")}>
-							<NavLink to="/cart">CART ({cart.length})</NavLink>
-						</div>
+					<div className={(page === 'Cart' ? "active-cell" : "inactive-cell")}>
+						<NavLink to="/cart">CART ({cart.length})</NavLink>
+					</div>
+
+					<div className={(page === 'Login' ? "active-cell" : "inactive-cell")}>
+						<NavLink to="/auth">Login</NavLink>
+					</div>
 
 				</div>
 
