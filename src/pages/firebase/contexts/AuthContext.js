@@ -1,12 +1,8 @@
 import React, { useContext, useState, useEffect } from "react"
 import { auth } from "../../../firebase.js"
-import fdb from "../../../firebase"
-
-import firebase from "firebase/app"
+import { fdb } from "../../../firebase"
 import "firebase/auth"
 import "firebase/database"
-
-// fdb.ref('users').set({ email:"hey" });
 
 const AuthContext = React.createContext()
 
@@ -19,7 +15,9 @@ export function AuthProvider({ children }) {
 	const [loading, setLoading] = useState(true)
 
 	function signup(email, password) {
-		return auth.createUserWithEmailAndPassword(email, password);
+		auth.createUserWithEmailAndPassword(email, password).then(cred => {
+			return fdb.ref(cred.user.uid).set({ "fav": [1, 2, 3] });
+		});
 	}
 
 	function login(email, password) {
@@ -48,7 +46,6 @@ export function AuthProvider({ children }) {
 			setLoading(false)
 
 		})
-
 		return unsubscribe
 	}, [])
 

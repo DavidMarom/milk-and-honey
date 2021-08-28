@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { withRouter } from "react-router";
 import { TopBar } from "./cmps/TopBar";
-import firebase from "firebase/app"
 
 // PAGES
 import { Cat } from "./pages/Cat";

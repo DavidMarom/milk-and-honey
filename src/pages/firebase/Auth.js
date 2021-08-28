@@ -1,5 +1,5 @@
 import React , {useEffect} from "react"
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setPageName } from '../../store/actions/userActions'
 
 import Signup from "./Signup"
@@ -11,7 +11,6 @@ import Login from "./Login"
 import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
-import { NavLink } from "react-router-dom";
 
 
 function Auth() {
