@@ -1,7 +1,8 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import { withRouter } from "react-router";
-import { storageService } from "./services/storageService"
+import { TopBar } from "./cmps/TopBar";
+import firebase from "firebase/app"
 
 // PAGES
 import { Cat } from "./pages/Cat";
@@ -11,13 +12,11 @@ import { ProductPage } from "./pages/ProductPage";
 import { CartPage } from "./pages/CartPage";
 
 import Auth from "./pages/firebase/Auth";
-// import Login from "./pages/firebase/Login";
 
-// COMPS
-import { TopBar } from "./cmps/TopBar";
 
 function _App() {
-	useEffect(() => { storageService.saveToStorage("page", "Home"); }, [])
+
+
 	return (
 		<div>
 			<div><TopBar /></div>
